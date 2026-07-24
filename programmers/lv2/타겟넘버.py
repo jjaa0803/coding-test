@@ -11,10 +11,12 @@
 4단계: 갈래 나열 + 3항목 검증 지금 이사람의 첫 선택은 뭐고, 선택지는 몇기인가? 각문장이 묶음인가
 5단계: 합치는 연산 정하기 방법의 수: 갈래 답을 더하기
 """
+
+"""재구현(7.24): i 는 지금까지 몇개를 (부호)정햇는지 s= 넘겨줄 정보 맨 마지막은 채점 역할만해서 경우의수 반환"""
 def solution(numbers, target):
     
     def dfs(i, s):
-        print('  ' * i, f'dfs({i}, {s})')
+        # print('  ' * i, f'dfs({i}, {s})') #시각화용 코드
 
         if i == len(numbers):              # 잎에 도달
             return 1 if s == target else 0
